@@ -2,8 +2,6 @@ import random
 
 
 def play():
-    print("Welcome to Number Guess Game".upper().center(50))
-
     i = 0
     while True:
         try:
@@ -31,16 +29,18 @@ def play():
             i += 1
         else:
             if guess == random_number:
-                print("Correct")
+                print("Correct!\n")
                 break
             elif guess > random_number:
                 print("Down!")
             else:
-                print("Up")
+                print("Up!")
             i += 1
 
     if i == guess_limit:
-        print("You didn't guess the number correctly!")
+        print("You Didn't Guess The Number Correctly. Try Again!\n")
 
 
-play()
+print("Welcome to Number Guess Game".center(50))
+while True:
+    play()
